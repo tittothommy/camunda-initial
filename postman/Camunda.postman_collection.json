@@ -1,0 +1,169 @@
+{
+	"info": {
+		"_postman_id": "3d6a1a7b-48b6-468a-9186-79a80f3edd3d",
+		"name": "Camunda",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "http://192.200.20.20:8080/engine-rest/",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "god@12345",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "titto.t@hcl.com",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "multipart/form-data",
+						"description": "Send file",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "upload",
+							"type": "file",
+							"src": ""
+						}
+					]
+				},
+				"url": {
+					"raw": "http://192.200.20.20:8080/engine-rest/deployment/create",
+					"protocol": "http",
+					"host": [
+						"192",
+						"200",
+						"20",
+						"20"
+					],
+					"port": "8080",
+					"path": [
+						"engine-rest",
+						"deployment",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost://192.200.20.20:8080/engine-rest/process-definition/key/PickCricketTeam/start",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{}"
+				},
+				"url": {
+					"raw": "http://192.200.20.20:8080/engine-rest/process-definition/key/PickCricketTeam/start",
+					"protocol": "http",
+					"host": [
+						"192",
+						"200",
+						"20",
+						"20"
+					],
+					"port": "8080",
+					"path": [
+						"engine-rest",
+						"process-definition",
+						"key",
+						"PickCricketTeam",
+						"start"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://192.200.20.20:8080/engine-rest/task",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://192.200.20.20:8080/engine-rest/task?processDefinitionKey=PickCricketTeam",
+					"protocol": "http",
+					"host": [
+						"192",
+						"200",
+						"20",
+						"20"
+					],
+					"port": "8080",
+					"path": [
+						"engine-rest",
+						"task"
+					],
+					"query": [
+						{
+							"key": "processDefinitionKey",
+							"value": "PickCricketTeam"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://192.200.20.20:8080/engine-rest/task/8b41f050-5997-11eb-aba5-080027a257ea/complete",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"variables\":\n    {\"teamName\": {\"value\": \"Mumbai Indians\"}}\n}"
+				},
+				"url": {
+					"raw": "http://192.200.20.20:8080/engine-rest/task/8b41f050-5997-11eb-aba5-080027a257ea/complete",
+					"protocol": "http",
+					"host": [
+						"192",
+						"200",
+						"20",
+						"20"
+					],
+					"port": "8080",
+					"path": [
+						"engine-rest",
+						"task",
+						"8b41f050-5997-11eb-aba5-080027a257ea",
+						"complete"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
