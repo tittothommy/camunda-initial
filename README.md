@@ -7,7 +7,7 @@ List of components installed for the basic camunda implementation are
  * Virtual machine using CentOS
  * Oracle Virtual Box
  * Vagrant
- * Camunda Modeler - [link to Camunda Modeler binaries](https://camunda.com/download/modeler/)
+ * Camunda Modeler - [link to Camunda Modeler binaries] (https://camunda.com/download/modeler/)
  * Camunda community platform using distribution type as Tomcat - [Link to community platform] (https://camunda.com/download/)
  * Postgres database - [Link to postgres binaries] (https://www.postgresql.org/download/linux/redhat/)
 
